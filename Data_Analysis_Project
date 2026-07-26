@@ -1,0 +1,14 @@
+import pandas as pd
+
+data = {
+    'Product': ['Laptop', 'Mouse', 'Monitor', 'Laptop', 'Keyboard', 'Mouse'],
+    'Price': [1000, 25, 200, 1000, 45, 25],
+    'Quantity': [2, 5, 3, 1, 4, 10]
+}
+
+df = pd.DataFrame(data)
+
+df['Total'] = df['Price'] * df['Quantity']
+
+print(df)
+print(df['Total'].sum())
